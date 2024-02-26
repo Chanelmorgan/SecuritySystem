@@ -153,11 +153,8 @@ int main(){
                 cout<<"Enter a valid choice!" << endl;
         }
     }
-
-
-
-
-
+    while(a!=4); // 4 is end program
+    return 0;
 }
 
 
