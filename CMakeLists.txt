@@ -3,4 +3,4 @@ project(SecuritySystem)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(SecuritySystem main.cpp)
+add_executable(SecuritySystem System.cpp System.h)
