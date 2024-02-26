@@ -143,6 +143,14 @@ int main(){
 
                 break;
             }
+            // end program
+            case 4:{
+                cout<<"--------- Thank you! ----------" << endl;
+
+                break;
+            }
+            default:
+                cout<<"Enter a valid choice!" << endl;
         }
     }
 
