@@ -17,6 +17,17 @@ int main(){
     string text, old, password1, password2, pass, name, password0, age, user, word, word1;
     string creds[2], cp[2];
 
+    cout<<"         Security System   " << endl;
+    cout<<"-------------------------------"<< endl;
+    cout<<"|        1. Register           |"<< endl;
+    cout<<"|        2. Login              |"<< endl;
+    cout<<"|        3. Change password    |"<< endl;
+    cout<<"|        4. End Program        |"<< endl;
+    cout<<"-------------------------------"<< endl<< endl;
+
+
+
+
 
 }
 
