@@ -54,7 +54,45 @@ int main(){
                 break;
             }
             case 2: {
+                cout<<"-------------------------------"<< endl;
+                cout<<"           Login               " << endl;
+                cout<<"|------------------------------|"<< endl << endl;
 
+                ifstream of2;
+                of2.open("file.txt");
+                cout<<"Username:- ";
+                cin>>user;
+                cout<<"Password:- ";
+                cin>>pass;
+
+                if(of2.is_open()){
+                    // this is the end of file function
+                    while(!of2.eof()){
+                        // reading the file line by line
+                        while(getline(of2, text)){
+                            istringstream iss(text);
+                            iss>>word;
+                            creds[i]=word; // first the user name is stored then move to the next pos
+                            i++;
+                        }
+                        // checking the user information matches
+                        if(user == creds[0] && pass == creds[1]){
+                            cout <<"---- Log in successful ----";
+                            cout << endl << endl;
+                            cout << "Details: "<<endl;
+                            cout << "Username: " + name<<endl;
+                            cout <<"Password: " + name<<endl;
+                            cout<<"Age: " + age << endl;
+                        } else{
+                            cout << endl << endl;
+                            cout <<"Incorrect Credentials"<< endl;
+                            cout <<"|       1. Press 2 to login            |" << endl;
+                            cout <<"|       1. Press 3 to change password  |" << endl;
+                            break;
+                        }
+                    }
+                }
+                break;
             }
         }
     }
