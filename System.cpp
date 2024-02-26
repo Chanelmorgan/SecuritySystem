@@ -105,7 +105,7 @@ int main(){
 
                 ifstream of0;
                 of0.open("file.txt");
-                cout<<"Enter the old password: -";
+                cout<<"Enter the old password:- ";
                 cin>>old;
                 if(of0.is_open()){
                     while(of0.eof()){
