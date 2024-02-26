@@ -25,6 +25,40 @@ int main(){
     cout<<"|        4. End Program        |"<< endl;
     cout<<"-------------------------------"<< endl<< endl;
 
+    do{
+        cout << endl << endl;
+        cout << "Enter your choice:- ";
+        cin >> a;
+        switch(a){
+            case 1:{
+                cout<<"-------------------------------"<< endl;
+                cout<<"           Register            " << endl;
+                cout<<"|------------------------------|"<< endl << endl;
+                // getting the users variables
+                cout<<"Username: ";
+                cin>>name;
+                cout<<"Password: ";
+                cin>>password0;
+                cout<<"Age: ";
+                cin>>age;
+
+                // writing the users details to a file
+                ofstream of1;
+                of1.open("file.txt");
+                if(of1.is_open()){
+                    of1 << name<<"\n";
+                    of1 << password0 <<"\n";
+                    cout << "Registration successful" << endl;
+                }
+
+                break;
+            }
+            case 2: {
+
+            }
+        }
+    }
+
 
 
 
