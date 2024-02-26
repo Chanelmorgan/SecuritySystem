@@ -30,6 +30,7 @@ int main(){
         cout << "Enter your choice:- ";
         cin >> a;
         switch(a){
+            // register
             case 1:{
                 cout<<"-------------------------------"<< endl;
                 cout<<"           Register            " << endl;
@@ -53,6 +54,7 @@ int main(){
 
                 break;
             }
+            // login
             case 2: {
                 cout<<"-------------------------------"<< endl;
                 cout<<"           Login               " << endl;
@@ -92,6 +94,53 @@ int main(){
                         }
                     }
                 }
+                break;
+            }
+            // change password
+            case 3:{
+                i =0;
+                cout<<"-------------------------------"<< endl;
+                cout<<"         Change password       " << endl;
+                cout<<"|------------------------------|"<< endl << endl;
+
+                ifstream of0;
+                of0.open("file.txt");
+                cout<<"Enter the old password: -";
+                cin>>old;
+                if(of0.is_open()){
+                    while(of0.eof()){
+                        while(getline(of0, text));
+                        istringstream iss(text);
+                        iss>> word1;
+                        cp[i] = word1;
+                        i++; // so that the password will also get stored
+                    }
+                    if(old ==cp[1]){
+                        of0.close();
+
+                        ofstream of1;
+                        if(of1.is_open()){
+                            cout<<"You have entered an old password. Enter a new password:-  ";
+                            cin>>password1;
+                            cout<<"Enter your new password again :- ";
+                            cin>>password2;
+                            if(password1 == password2){
+                                of1 <<cp[0]<<"\n";
+                                of1 << password1;
+                                cout <<"Password change successful!" << endl;
+                            } else{
+                                of1<<cp[0]<<"\n";
+                                of1<<old;
+                                cout<<"Password do not match" << endl;
+                            }
+                        }
+
+                    } else{
+                        cout << "Please enter a valid password! " << endl;
+                        break;
+                    }
+                }
+
                 break;
             }
         }
